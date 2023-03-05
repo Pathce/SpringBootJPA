@@ -8,11 +8,6 @@ public class DemoApplication {
 
 	public static void main(String[] args) {
 		
-		Hello hello = new Hello();
-		hello.setData("hello");
-		String data = hello.getData();
-		System.out.println("data = " + data);
-		
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
