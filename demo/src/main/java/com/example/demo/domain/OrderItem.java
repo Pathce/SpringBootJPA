@@ -1,6 +1,8 @@
 package com.example.demo.domain;
 
+import lombok.AccessLevel;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import com.example.demo.domain.Item.Item;
@@ -11,6 +13,7 @@ import static jakarta.persistence.FetchType.*;
 @Entity
 @Table(name = "order_item")
 @Getter @Setter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class OrderItem {
 
     @Id @GeneratedValue
