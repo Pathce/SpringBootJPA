@@ -2,6 +2,7 @@ package com.example.demo.service;
 
 import com.example.demo.domain.Member;
 import com.example.demo.repository.MemberRepository;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,11 +46,11 @@ class MemberServiceTest {
 
         //when
         memberService.join(member1);
-        assertThrows(IllegalStateException.class, () -> {
-            memberService.join(member2);
-        });
 
         //then
-        fail("예외가 발생해야 한다.");
+        Assertions.assertThrows(IllegalStateException.class, () -> {
+            memberService.join(member2);
+        });
+        Assertions.fail("예외가 발생해야 한다.");
     }
 }
