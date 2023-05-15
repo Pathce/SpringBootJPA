@@ -22,4 +22,9 @@ public class Book extends Item {
         setAuthor(form.getAuthor());
         setIsbn(form.getIsbn());
     }
+
+    public void modBook(BookForm form) {
+        setId(form.getId());
+        createBook(form);
+    }
 }
